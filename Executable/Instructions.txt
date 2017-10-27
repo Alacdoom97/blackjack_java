@@ -1,0 +1,11 @@
+Instructions:
+
+- Extract all the files to desktop in order for the bat file to work.
+- Once extracted open the Run.bat file.
+
+- If for some reason the Run.bat file doesn't open, open the RunnableJarFile.jar file through command prompt.
+- In case you don't know how to run a jar file through command prompt, here is a link on how to do it:
+ 
+https://www.youtube.com/watch?v=MhwX8_ohOD8
+
+- For instructions on how to run on macOS please visit this video: https://www.youtube.com/watch?v=WkTt70O6SwI 
