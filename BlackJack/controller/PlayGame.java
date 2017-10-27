@@ -20,7 +20,6 @@ public class PlayGame extends IObserver{
 		
 		if (a_game.IsGameOver()) {
 			a_view.DisplayGameOver(a_game.IsDealerWinner());
-			System.exit(0);
 		}
 
 		InputChoices input = a_view.GetInput();
@@ -35,7 +34,8 @@ public class PlayGame extends IObserver{
 		case Stand:
 			a_game.Stand();
 			break;
-		case Quit: return false;
+		case Quit:
+			return false;
 		}
 		return true;
 
