@@ -2,8 +2,9 @@ package BlackJack.controller;
 
 import BlackJack.view.IView;
 import BlackJack.model.Game;
+import BlackJack.model.IObserver;
 
-public class PlayGame {
+public class PlayGame extends IObserver{
 
 	private Game a_game;
 	private IView a_view;
@@ -11,6 +12,7 @@ public class PlayGame {
 	public PlayGame(Game a_game, IView a_view) {
 		this.a_game = a_game;
 		this.a_view = a_view;
+		a_game.AddObservableValue(this); // make the Game an Observer
 	}
 
 	public boolean Play() {
@@ -26,15 +28,12 @@ public class PlayGame {
 		switch (input) {
 		case Play:
 			a_game.NewGame();
-			deal();
 			break;
 		case Hit:
 			a_game.Hit();
-			deal();
 			break;
 		case Stand:
 			a_game.Stand();
-			deal();
 			break;
 		case Quit: return false;
 		}
@@ -42,7 +41,7 @@ public class PlayGame {
 
 	}
 
-	public void deal() {
+	public void update() { // Update method gets called whenever a new card is dealt
 		 try {
 	            Thread.sleep(1000);
 	        } catch (InterruptedException e) {
