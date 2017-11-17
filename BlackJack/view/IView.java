@@ -1,7 +1,5 @@
 package BlackJack.view;
 
-import BlackJack.controller.InputChoices;
-
 public interface IView
 {
   void DisplayWelcomeMessage();

@@ -1,10 +1,11 @@
 package BlackJack.controller;
 
 import BlackJack.view.IView;
+import BlackJack.view.InputChoices;
 import BlackJack.model.Game;
 import BlackJack.model.IObserver;
 
-public class PlayGame extends IObserver{
+public class PlayGame implements IObserver{
 
 	private Game a_game;
 	private IView a_view;

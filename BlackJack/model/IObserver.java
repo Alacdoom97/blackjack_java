@@ -1,7 +1,7 @@
 package BlackJack.model;
 
-public abstract class IObserver {
+public interface IObserver {
 	
-	public abstract void update();
+	void update();
 	
 }

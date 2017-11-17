@@ -2,8 +2,6 @@ package BlackJack.view;
 
 import java.util.Scanner;
 
-import BlackJack.controller.InputChoices;
-
 public class SimpleView implements IView {
 	private Scanner scan = new Scanner(System.in);
 

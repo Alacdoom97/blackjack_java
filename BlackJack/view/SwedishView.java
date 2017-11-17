@@ -2,8 +2,6 @@ package BlackJack.view;
 
 import java.util.Scanner;
 
-import BlackJack.controller.InputChoices;
-
 
 public class SwedishView implements IView 
     {
