@@ -19,6 +19,7 @@ public class Player {
   public void DealCard(Card a_addToHand)
   {
     m_hand.add(a_addToHand);
+    NotifyObservers();
   }
   
   public Iterable<Card> GetHand()
@@ -37,6 +38,7 @@ public class Player {
     {
       c.Show(true);
     }
+    NotifyObservers();
   }
   
   public int CalcScore()

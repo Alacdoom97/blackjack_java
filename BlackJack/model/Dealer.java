@@ -54,11 +54,9 @@ public class Dealer extends Player {
   public boolean Stand() { //updated from sequence diagram 
 	if (m_deck != null) {
 		ShowHand();
-		NotifyObservers();
 		while(m_hitRule.DoHit(this)) {
 			m_hitRule.DoHit(this);
 			DealCard(this, true);
-			
 		}
 		return true;
 	}
@@ -69,6 +67,5 @@ public class Dealer extends Player {
 	  Card c = m_deck.GetCard();
 	  c.Show(bool);
 	  a_player.DealCard(c); 
-	  NotifyObservers();
   }
 }
